@@ -72,12 +72,14 @@ export default function HomePage() {
     document.documentElement.setAttribute('data-theme', next);
   };
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://itskashmiere-api.rickjefferson.workers.dev';
+
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newsletterEmail) return;
     setNewsletterLoading(true);
     try {
-      const res = await fetch('http://localhost:8787/api/newsletter', {
+      const res = await fetch(`${API_URL}/api/newsletter`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: newsletterEmail })
@@ -104,7 +106,7 @@ export default function HomePage() {
     }
     setContactLoading(true);
     try {
-      const res = await fetch('http://localhost:8787/api/contact', {
+      const res = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(contactForm)
@@ -132,7 +134,7 @@ export default function HomePage() {
     }
     setBookingLoading(true);
     try {
-      const res = await fetch('http://localhost:8787/api/bookings', {
+      const res = await fetch(`${API_URL}/api/bookings`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(bookingForm)

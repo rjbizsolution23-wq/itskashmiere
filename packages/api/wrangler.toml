@@ -6,7 +6,7 @@ compatibility_flags = ["nodejs_compat"]
 [[d1_databases]]
 binding = "DB"
 database_name = "itskashmiere-db"
-database_id = "local-db-id"
+database_id = "a81732ae-e0d5-40a9-9af9-82def462c2c2"
 
 [vars]
 # Add CORS / stripe variables here when needed
