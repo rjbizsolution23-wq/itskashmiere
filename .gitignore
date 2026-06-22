@@ -1,0 +1,17 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Next.js build and cache
+.next/
+out/
+
+# Wrangler / Workers state & logs
+.wrangler/
+.dev.vars
+wrangler-debug.log
+.system_generated/
+
+# OS/System files
+.DS_Store
+Thumbs.db
